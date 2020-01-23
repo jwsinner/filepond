@@ -174,7 +174,7 @@ const dragItem = ({ root, action, props }) => {
     const dragWidth = getItemWidth(view);
 
     // get rows and columns (There will always be at least one row and one column if a file is present)
-    const cols = Math.floor(root.rect.outer.width / dragWidth);
+    let cols = Math.floor(root.rect.outer.width / dragWidth);
     if(cols > numItems) cols = numItems;
     // rows are used to find when we have left the preview area bounding box
     const rows = Math.floor(numItems / cols + 1);
